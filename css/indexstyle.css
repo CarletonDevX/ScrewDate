@@ -1,2 +1,13 @@
 /* Main page CSS */
+#title {
+    margin-left: 35px;
+}
 
+li {
+    display:inline;
+    margin-right: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+}

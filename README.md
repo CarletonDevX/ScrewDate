@@ -50,5 +50,7 @@ ScrewDate
 
         Finally, about the timeline. We have two weeks to complete this project. I think we should all meet on Thursday or Friday at some point if possible for a quick checkin on progress, and then moving forward with integration of the various project parts in the next week. In general, that's what we should be shooting for. 
     
+    
+    Note: There will be TODO messages in the code. Adam will be adding structure with comments as to what needs to be implemented and a rough idea of how. Search the repo to find out more!
 
 

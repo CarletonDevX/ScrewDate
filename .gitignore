@@ -1,1 +1,3 @@
 *.pyc
+stalkernet_data.csv
+Django/*/migrations/*

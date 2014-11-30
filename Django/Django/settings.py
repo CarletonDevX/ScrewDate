@@ -57,13 +57,11 @@ WSGI_APPLICATION = 'Django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-# TODO: Fill in with real username, password and port
+# TODO: Ideally add username and password for DB
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mydatabase',
-        'USER': 'mydatabaseuser',
-        'PASSWORD': 'mypassword',
+        'NAME': 'screwdate',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

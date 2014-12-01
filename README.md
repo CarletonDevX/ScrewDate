@@ -17,7 +17,7 @@ TODO
     c. Django Views
     d. Backend integration
 4. Collect Stalkernet data (Completed)
-5. Format data in postgreSQL table
+5. Format data in postgreSQL table (Completed - run the importdata.py script with data in ScrewDate folder. lbiester has the data)
 6. Models, Migrations to integrate with database
 7. SSO integration
 8. Email API integration

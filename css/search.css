@@ -68,7 +68,7 @@
     color: black;
     margin-bottom: 10px;
     margin-left: 20px;
-    margin-right: 30px;
+    margin-right: 32px;
 }
 
 .sidebar-nav li a:hover {
@@ -122,4 +122,18 @@
         position: relative;
         margin-right: 0;
     }
+}
+
+input.form-control {
+    width: 210px;
+}
+
+select.form-control {
+    width: 210px;
+    margin: 0px 20px;
+}
+
+button#dateSearch {
+    width: 210px;
+    margin-top: 20px;
 }

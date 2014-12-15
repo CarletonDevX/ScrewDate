@@ -43,7 +43,7 @@ Environment Setup
 4. Install PostgreSQL `$ brew install postgresql`
 5. `cd path/to/screwdate`
 6. `bundle install` (if pg gem doesn't install, try the below command)
-7. `$ ARCHFlAGS= "-arch x86\_64" gem install pg`
+7. `$ ARCHFlAGS= "-arch x86_64" gem install pg`
 
 After this you should be set to go!
 

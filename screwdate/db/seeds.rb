@@ -7,8 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 require 'csv'
-
-CSV.foreach('../stalkernet_data.csv', :headers => true) do |row|
-  Student.create(studentName: row[0], major: row[1], classYear: row[2], dormName: row[3],
-    dormFloor: row[4], dormRoomNumber: row[5], studentEmail: row[6])
+if Student.all.length == 0
+  CSV.foreach('../stalkernet_data.csv', :headers => false) do |row|
+    Student.create(studentName: row[0], major: row[1], classYear: row[2],
+      dormName: row[3], dormFloor: row[4], dormRoomNumber: row[5],
+      studentEmail: row[6])
+  end
 end

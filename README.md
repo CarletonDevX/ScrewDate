@@ -45,6 +45,15 @@ Environment Setup
 6. `bundle install` (if pg gem doesn't install, try the below command)
 7. `$ ARCHFlAGS= "-arch x86_64" gem install pg`
 
-After this you should be set to go!
+After this your rails environment should be set to go!
+
+Database Setup
+-----------------
+1. Start your database server - I do this using [Postgres.app](http://postgresapp.com/)
+2. Make sure that the settings in database.yml correspond to how you want your database to be set up
+3. `rake db:setup`
+4. `rake db:migrate` - you can check this step by using `rails console` and entering 'Student', which should return a list of data attributes
+5. Run stalkernet script, place stalkernet_data.csv folder one level above the rails application
+6. `rake db:seed` - this will populate your database with the data from the CSV. You can check that this happened by using your `rails console` again and entering 'Student.all', which should give you the data from the CSV
 
 If you want to work on this repository, just send me ([chetaldrich](https://github.com/chetaldrich)) an email.  

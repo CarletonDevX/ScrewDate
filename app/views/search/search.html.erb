@@ -4,21 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>ScrewDate Search</title>
-
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>ScrewDate</title>
 </head>
 
 <body>
+  <div id="page-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Search for your ScrewDate</h1>
+          <p>Results will go here...</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar">
-            <ul class="sidebar-nav">
+            <ul>
                 <form method="link" action="#">
-                    <li class="sidebar-logo">
+                    <li class="logo">
                         <a href="#">
                             ScrewDate
                         </a>
@@ -74,33 +77,13 @@
                     </li>
                 </form>
             </ul>
-        </div>
 
-        <div id="page-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Search for your ScrewDate</h1>
-                        <p>Results will go here...</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu button woo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
 
 </body>
 

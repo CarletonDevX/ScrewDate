@@ -17,7 +17,7 @@ TODO
   * Rails Views
   * Backend integration
 4. Collect Stalkernet data ([Completed](https://github.com/CarletonDevX/Stalkernet))
-5. Format data in postgreSQL table (Completed - see instructions [here](https://github.com/CarletonDevX/ScrewDate#database-setup). [lbiester](https://github.com/lbiester) has the data, if you cannot run the Stalkernet script)
+5. Format data in postgreSQL table (Completed - see instructions [here](#database-setup). [lbiester](https://github.com/lbiester) has the data, if you cannot run the Stalkernet script)
 6. Models, Migrations to integrate with database
 7. SSO integration (may just use typical authentication scheme)
 8. Email API integration

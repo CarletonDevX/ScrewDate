@@ -27,44 +27,24 @@
           </li>
           <li>
             <p>Year</p>
-            <select class="form-control" name="year">
-              <option>All</option>
-              <option>2015</option>
-              <option>2016</option>
-              <option>2017</option>
-              <option>2018</option>
-            </select>
+            <%= select_tag :classYear, options_for_select(@years),
+            { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
             <p>Dorm</p>
-            <select class="form-control">
-              <option>All</option>
-              <option>Goodhue</option>
-              <option>Davis</option>
-              <option>Nourse</option>
-              <option>(to be continued)</option>
-            </select>
+            <%= select_tag :dormName, options_for_select(@dorms),
+              { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
             <p>Floor</p>
             <!-- we should make this change based off of the dorm selection because duh -->
-            <select class="form-control">
-              <option>All</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
+            <%= select_tag :floor, options_for_select(@floors),
+              { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
             <p>Major</p>
-            <select class="form-control">
-              <option>All</option>
-              <option>Computer Science</option>
-              <option>Math</option>
-              <option>Chemistry</option>
-              <option>Chinese</option>
-            </select>
+            <%= select_tag :major, options_for_select(@majors),
+              { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
             <p>

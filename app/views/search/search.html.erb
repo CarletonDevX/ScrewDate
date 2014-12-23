@@ -8,30 +8,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to 'ScrewDate', '/', class: "navbar-brand" %>
-      </div>
-
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Find Your Roommate</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Sign Up</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <%= render "shared/nav" %>
   <div class = "container">
     <div class="row">
       <div class="col-md-12">

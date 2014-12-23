@@ -1,8 +1,8 @@
 #student data
 stalkernet_data.csv
 
-#temporary files
-tmp/*
+# log files
+/log/*.log
 
-#development log file
-log
+# tmp files
+/tmp/*

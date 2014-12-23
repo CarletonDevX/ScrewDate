@@ -9,8 +9,8 @@
 require 'csv'
 if Student.all.length == 0
   CSV.foreach('../stalkernet_data.csv', :headers => false) do |row|
-    Student.create(studentName: row[0], major: row[1], classYear: row[2],
-      dormName: row[3], dormFloor: row[4], dormRoomNumber: row[5],
-      studentEmail: row[6])
+    Student.create(student_name: row[0], major: row[1], class_year: row[2],
+      dorm_name: row[3], dorm_floor: row[4], dorm_room_number: row[5],
+      student_email: row[6])
   end
 end

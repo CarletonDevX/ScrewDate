@@ -27,18 +27,18 @@
           </li>
           <li>
             <p>Year</p>
-            <%= select_tag :classYear, options_for_select(@years),
+            <%= select_tag :class_year, options_for_select(@years),
             { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
             <p>Dorm</p>
-            <%= select_tag :dormName, options_for_select(@dorms),
+            <%= select_tag :dorm_name, options_for_select(@dorms),
               { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
             <p>Floor</p>
             <!-- we should make this change based off of the dorm selection because duh -->
-            <%= select_tag :floor, options_for_select(@floors),
+            <%= select_tag :dorm_floor, options_for_select(@floors),
               { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>

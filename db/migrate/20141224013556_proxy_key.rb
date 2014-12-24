@@ -1,0 +1,12 @@
+class ProxyKey < ActiveRecord::Migration
+  def self.up
+    remove_column :students, :proxy
+    remove_column :students, :proxy_email
+    add_column :students, :proxy_id, :integer
+  end
+  def self.down
+    add_column :students, :proxy
+    add_column :students, :proxy_email
+    remove_column :students, :proxy_id
+  end
+end

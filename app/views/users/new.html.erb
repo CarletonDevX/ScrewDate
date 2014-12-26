@@ -12,8 +12,31 @@
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <%= render "shared/nav" %>
-  <h1>Users#new</h1>
-  <p>Find me in app/views/users/new.html.erb</p>
+  <div class = "container">
+    <div class = "row">
+      <h1>Sign up</h1>
+    </div>
+  </div>
 
+  <div class = "container">
+    <div class = "row">
+      <ul>
+        <form method="post" action = "Users#new">
+          <li>
+            <p>Name</p>
+          </li>
+          <li>
+            <p>Email</p>
+          </li>
+          <li>
+            <p>Password</p>
+          </li>
+          <li>
+            <p>Confirmation</p>
+          </li>
+        </form>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

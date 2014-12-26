@@ -15,12 +15,21 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  test "check for email" do
+  test "check for valid email to pass" do
     valid_addresses = %w[chetaldrich@example.com CHET@hello.COM L_AUR-A@google.example.org
                          hello.there@test.cn hi+there@test.cn]
-    valid_addresses.each do |address|
-      @user.email = address
-      assert @user.valid?, "#{address.inspect} should be valid"
+    valid_addresses.each do |valid_address|
+      @user.email = valid_address
+      assert @user.valid?, "#{valid_address.inspect} should be valid"
+    end
+  end
+
+  test "check for invalid email to not pass" do
+    invalid_addresses = %w[not.valid@example,com user_at_example.io
+                           user.name@example.com@hello.org hello@there+you.com]
+    invalid_addresses.each do |invalid_address|
+      @user.email = invalid_address
+      assert_not @user.valid? "#{invalid_address.inspect} should be invalid"
     end
   end
 end

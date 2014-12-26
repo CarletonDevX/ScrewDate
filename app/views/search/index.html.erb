@@ -9,7 +9,7 @@
 
 <body>
   <%= render "shared/nav" %>
-  <div class = "container">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h1>Search for your ScrewDate</h1>
@@ -17,8 +17,8 @@
     </div>
   </div>
 
-  <div class = "container">
-    <div class = "row">
+  <div class="container">
+    <div class="row">
       <ul>
         <form method="link" action="#">
           <li>
@@ -26,23 +26,23 @@
           <input type="text" class="form-control" name="name" />
           </li>
           <li>
-            <p>Year</p>
+            <label for="class_year">Year</label>
             <%= select_tag :class_year, options_for_select(@years),
             { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
-            <p>Dorm</p>
+            <label for="dorm_name">Dorm</label>
             <%= select_tag :dorm_name, options_for_select(@dorms),
               { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
-            <p>Floor</p>
+            <label for="dorm_floor">Floor</label>
             <!-- we should make this change based off of the dorm selection because duh -->
             <%= select_tag :dorm_floor, options_for_select(@floors),
               { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
-            <p>Major</p>
+            <label for="major">Major</label>
             <%= select_tag :major, options_for_select(@majors),
               { :class => 'form-control', :include_blank => 'All' } %>
           </li>

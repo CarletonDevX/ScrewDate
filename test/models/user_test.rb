@@ -11,13 +11,16 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "check for name" do
-    @user.name = "      "
+    @user.name = "a" * 31
     assert_not @user.valid?
   end
 
   test "check for email" do
-    @user.email = "       "
-    assert_not @user.valid?
+    valid_addresses = %w[chetaldrich@example.com CHET@hello.COM L_AUR-A@google.example.org
+                         hello.there@test.cn hi+there@test.cn]
+    valid_addresses.each do |address|
+      @user.email = address
+      assert @user.valid?, "#{address.inspect} should be valid"
+    end
   end
-  
 end

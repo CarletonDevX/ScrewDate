@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141225230658) do
+ActiveRecord::Schema.define(version: 20141225232510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "majors", force: true do |t|
+    t.string "major_name"
+  end
+
+  create_table "majors_students", id: false, force: true do |t|
+    t.integer "student_id"
+    t.integer "major_id"
+  end
+
+  add_index "majors_students", ["major_id"], name: "index_majors_students_on_major_id", using: :btree
+  add_index "majors_students", ["student_id"], name: "index_majors_students_on_student_id", using: :btree
 
   create_table "students", force: true do |t|
     t.string  "student_name"
@@ -26,7 +38,6 @@ ActiveRecord::Schema.define(version: 20141225230658) do
     t.boolean "taken",            default: false
     t.boolean "confirmed",        default: false
     t.integer "class_year"
-    t.string  "major"
     t.integer "proxy_id"
     t.integer "date_id"
   end

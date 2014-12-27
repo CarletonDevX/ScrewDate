@@ -4,4 +4,5 @@ class Student < ActiveRecord::Base
   belongs_to :date_requestor, class_name: "Student", foreign_key: "date_id"
   has_many :date_requested, class_name: "Student", foreign_key: "date_id"
   has_and_belongs_to_many :majors
+  belongs_to :dorm, class_name: "Dorm", foreign_key: "dorm_id"
 end

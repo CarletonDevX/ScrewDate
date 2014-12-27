@@ -11,10 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141226005820) do
+ActiveRecord::Schema.define(version: 20141226195805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dorms", force: true do |t|
+    t.string "dorm_name"
+  end
 
   create_table "majors", force: true do |t|
     t.string "major_name"
@@ -30,7 +34,6 @@ ActiveRecord::Schema.define(version: 20141226005820) do
 
   create_table "students", force: true do |t|
     t.string  "student_name"
-    t.string  "dorm_name"
     t.integer "dorm_floor"
     t.string  "dorm_room_number"
     t.string  "student_email"
@@ -40,6 +43,7 @@ ActiveRecord::Schema.define(version: 20141226005820) do
     t.integer "class_year"
     t.integer "proxy_id"
     t.integer "date_id"
+    t.integer "dorm_id"
   end
 
   create_table "users", force: true do |t|

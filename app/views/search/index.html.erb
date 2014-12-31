@@ -27,7 +27,7 @@
           </li>
           <li>
             <label for="class_year">Year</label>
-            <%= select_tag :class_year, options_for_select(@years),
+            <%= select_tag :class_year, options_for_select(@years.uniq.pluck(:class_year)),
             { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>
@@ -38,7 +38,7 @@
           <li>
             <label for="dorm_floor">Floor</label>
             <!-- we should make this change based off of the dorm selection because duh -->
-            <%= select_tag :dorm_floor, options_for_select(@floors),
+            <%= select_tag :dorm_floor, options_for_select(@floors.uniq.pluck(:dorm_floor)),
               { :class => 'form-control', :include_blank => 'All' } %>
           </li>
           <li>

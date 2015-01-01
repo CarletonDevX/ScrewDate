@@ -21,27 +21,27 @@
     <div class="row">
       <ul>
         <form method="link" action="#">
-          <li>
-          <p>Name</p>
-          <input type="text" class="form-control" name="name" />
+          <li id="name_option">
+            <p>Name</p>
+            <input type="text" class="form-control" name="name" />
           </li>
-          <li>
+          <li id="year_option">
             <label for="class_year">Year</label>
             <%= select_tag :class_year, options_for_select(@years.uniq.pluck(:class_year)),
             { :class => 'form-control', :include_blank => 'All' } %>
           </li>
-          <li>
+          <li id="dorm_option">
             <label for="dorm_name">Dorm</label>
             <%= select_tag :dorm_name, options_from_collection_for_select(@dorms, 'id', 'dorm_name'),
               { :class => 'form-control', :include_blank => 'All' } %>
           </li>
-          <li>
+          <li id="floor_option" class="hide">
             <label for="dorm_floor">Floor</label>
             <!-- we should make this change based off of the dorm selection because duh -->
             <%= select_tag :dorm_floor, options_for_select(@floors.uniq.pluck(:dorm_floor)),
               { :class => 'form-control', :include_blank => 'All' } %>
           </li>
-          <li>
+          <li id="major_option">
             <label for="major">Major</label>
             <%= select_tag :major, options_from_collection_for_select(@majors, 'id', 'major_name'),
               { :class => 'form-control', :include_blank => 'All' } %>

@@ -19,40 +19,28 @@
 
   <div class="container">
     <div class="row">
-      <ul>
+      <div class="col-md-12">
         <form method="link" action="#">
-          <li id="name_option">
-            <p>Name</p>
+            <label for="name">Name</label>
             <input type="text" class="form-control" name="name" />
-          </li>
-          <li id="year_option">
             <label for="class_year">Year</label>
             <%= select_tag :class_year, options_for_select(@years.uniq.pluck(:class_year)),
             { :class => 'form-control', :include_blank => 'All' } %>
-          </li>
-          <li id="dorm_option">
             <label for="dorm_name">Dorm</label>
             <%= select_tag :dorm_name, options_from_collection_for_select(@dorms, 'id', 'dorm_name'),
               { :class => 'form-control', :include_blank => 'All' } %>
-          </li>
-          <li id="floor_option" class="hide">
-            <label for="dorm_floor">Floor</label>
-            <!-- we should make this change based off of the dorm selection because duh -->
-            <%= select_tag :dorm_floor, options_for_select(@floors.uniq.pluck(:dorm_floor)),
-              { :class => 'form-control', :include_blank => 'All' } %>
-          </li>
-          <li id="major_option">
+            <span id="floor_option">
+              <label for="dorm_floor">Floor</label>
+              <!-- we should make this change based off of the dorm selection because duh -->
+              <%= select_tag :dorm_floor, options_for_select(@floors.uniq.pluck(:dorm_floor)),
+                { :class => 'form-control', :include_blank => 'All' } %>
+            </span>
             <label for="major">Major</label>
             <%= select_tag :major, options_from_collection_for_select(@majors, 'id', 'major_name'),
               { :class => 'form-control', :include_blank => 'All' } %>
-          </li>
-          <li>
-            <p>
-              <button type="submit" class="btn btn-default" id="dateSearch">Find a date!</button>
-            </p>
-          </li>
+              <button type="submit" class="btn btn-primary btn-lg pull-right" id="dateSearch">Find a date!</button>
         </form>
-      </ul>
+      </div>
     </div>
   </div>
 

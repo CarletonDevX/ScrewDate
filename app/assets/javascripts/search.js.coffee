@@ -5,6 +5,6 @@
 $ ->
     $('select#dorm_name').change ->
         if ($(this).val() == '')
-            $('li#floor_option').addClass('hide')
+            $('span#floor_option').addClass('hide')
         else
-            $('li#floor_option').removeClass('hide')
+            $('span#floor_option').removeClass('hide')

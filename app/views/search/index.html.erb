@@ -16,10 +16,11 @@
       </div>
     </div>
   </div>
+  <% if @studentsResults == nil %>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <form method="link" action="#">
+        <form>
           <%= form_tag('/search', :method => "get", id: "search-form") do %>
             <label for="name">Name</label>
             <input type="text" class="form-control" name="name" />
@@ -45,6 +46,15 @@
       </div>
     </div>
   </div>
+  <% else %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        Search results here
+      </div>
+    </div>
+  </div>
+  <% end %>
 
 
 </body>

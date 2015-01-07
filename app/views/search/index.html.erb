@@ -16,45 +16,14 @@
       </div>
     </div>
   </div>
+  <div class="container">
   <% if @studentsResults == nil %>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <form>
-          <%= form_tag('/search', :method => "get", id: "search-form") do %>
-            <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" />
-            <label for="class_year">Year</label>
-            <%= select_tag :class_year, options_for_select(@years.uniq.pluck(:class_year)),
-            { :class => 'form-control', :include_blank => 'All' } %>
-            <label for="dorm_name">Dorm</label>
-            <%= select_tag :dorm_name, options_from_collection_for_select(@dorms, 'id', 'dorm_name'),
-              { :class => 'form-control', :include_blank => 'All' } %>
-            <span id="floor_option">
-              <label for="dorm_floor">Floor</label>
-              <!-- we should make this change based off of the dorm selection because duh -->
-              <%= select_tag :dorm_floor, options_for_select(@floors.uniq.pluck(:dorm_floor)),
-                { :class => 'form-control', :include_blank => 'All' } %>
-            </span>
-            <label for="major">Major</label>
-            <%= select_tag :major, options_from_collection_for_select(@majors, 'id', 'major_name'),
-              { :class => 'form-control', :include_blank => 'All' } %>
-            <%= submit_tag "Find a date!",
-              { :class => 'btn btn-primary btn-lg pull-right', :id => 'dateSearch'}%>
-          <% end %>
-        </form>
-      </div>
-    </div>
-  </div>
+    <%= render "form" %>
   <% else %>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        Search results here
-      </div>
-    </div>
-  </div>
+    <%= render "results" %>
   <% end %>
+  </div>
+
 
 
 </body>

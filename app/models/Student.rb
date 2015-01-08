@@ -5,4 +5,9 @@ class Student < ActiveRecord::Base
   has_many :date_requested, class_name: "Student", foreign_key: "date_id"
   has_and_belongs_to_many :majors
   belongs_to :dorm, class_name: "Dorm", foreign_key: "dorm_id"
+  
+  def self.search(student_name)
+    where(student_name: student_name) if student_name.present?
+  end
+
 end

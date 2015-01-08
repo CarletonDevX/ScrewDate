@@ -7,7 +7,11 @@ class Student < ActiveRecord::Base
   belongs_to :dorm, class_name: "Dorm", foreign_key: "dorm_id"
   
   def self.search(student_name)
-    where(student_name: student_name) if student_name.present?
+    if student_name.present?
+      self.where(student_name: student_name)
+    else
+      self.all
+    end
   end
 
 end

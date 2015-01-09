@@ -1,7 +1,8 @@
 class SearchController < ApplicationController
   def index
     if request.query_parameters.length != 0
-      @studentsResults = Student.all
+      p = request.query_parameters
+      @studentsResults = Student.search(p[:name])
     end
     @majors = Major.order(:major_name)
     @dorms = Dorm.order(:dorm_name)

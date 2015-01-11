@@ -5,13 +5,24 @@ class Student < ActiveRecord::Base
   has_many :date_requested, class_name: "Student", foreign_key: "date_id"
   has_and_belongs_to_many :majors
   belongs_to :dorm, class_name: "Dorm", foreign_key: "dorm_id"
-  
-  def self.search(student_name)
+
+  def self.search(student_name, class_year, dorm_id, major)
+    students = self.all
+
     if student_name.present?
-      self.where("student_name LIKE ?", "%#{student_name}%")
-    else
-      self.all
+      students = students.where("student_name LIKE ?", "%#{student_name}%")
     end
+
+    if class_year.present?
+      students = students.where("class_year = ?", class_year)
+    end
+
+    if dorm_id.present?
+      students = students.where("dorm_id = ?", dorm_id)
+    end
+
+    return students
+
   end
 
 end

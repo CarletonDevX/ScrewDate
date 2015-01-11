@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-    $('select#dorm_name').change ->
+    $('select#dorm_id').change ->
         if ($(this).val() == '')
             $('span#floor_option').addClass('hide')
         else

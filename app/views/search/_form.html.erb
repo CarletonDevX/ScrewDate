@@ -8,17 +8,17 @@
         <%= label_tag(:class_year, "Year") %>
         <%= select_tag :class_year, options_for_select(@years.uniq.pluck(:class_year)),
         { :class => 'form-control', :include_blank => 'All' } %>
-        <%= label_tag(:dorm_name, "Dorm") %>
+        <%= label_tag(:dorm_id, "Dorm") %>
         <%= select_tag :dorm_id, options_from_collection_for_select(@dorms, 'id', 'dorm_name'),
         { :class => 'form-control', :include_blank => 'All' } %>
-        <span id="floor_option" class="hide">
+        <span id="floor_option">
           <%= label_tag(:dorm_floor, "Floor") %>
           <!-- we should make this change based off of the dorm selection because duh -->
           <%= select_tag :dorm_floor, options_for_select(@floors.uniq.pluck(:dorm_floor)),
           { :class => 'form-control', :include_blank => 'All' } %>
         </span>
-        <%= label_tag(:major, "Major") %>
-        <%= select_tag :major, options_from_collection_for_select(@majors, 'id', 'major_name'),
+        <%= label_tag(:major_id, "Major") %>
+        <%= select_tag :major_id, options_from_collection_for_select(@majors, 'id', 'major_name'),
         { :class => 'form-control', :include_blank => 'All' } %>
         <%= submit_tag "Find a date!",
         { :class => 'btn btn-primary btn-lg pull-right', :id => 'dateSearch'}%>

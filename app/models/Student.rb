@@ -25,7 +25,9 @@ class Student < ActiveRecord::Base
       students = students.joins(:majors).where(:majors => {id: major_id})
     end
 
-    return students
+    # make sure that shown students are available, have a proxy
+    # and don't yet have a date
+    return students.where(:available => true).where(:taken => false).where.not(:proxy => null)
 
   end
 

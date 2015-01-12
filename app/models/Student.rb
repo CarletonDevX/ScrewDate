@@ -6,7 +6,7 @@ class Student < ActiveRecord::Base
   has_and_belongs_to_many :majors
   belongs_to :dorm, class_name: "Dorm", foreign_key: "dorm_id"
 
-  def self.search(student_name, class_year, dorm_id, major)
+  def self.search(student_name, class_year, dorm_id, major_id)
     students = self.all
 
     if student_name.present?
@@ -19,6 +19,10 @@ class Student < ActiveRecord::Base
 
     if dorm_id.present?
       students = students.where("dorm_id = ?", dorm_id)
+    end
+
+    if major_id.present?
+      students = students.joins(:majors).where(:majors => {id: major_id})
     end
 
     return students

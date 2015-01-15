@@ -8,31 +8,7 @@
 <div class="row">
   <div class="col-md-12">
     <% @studentsResults.each do |result| %>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <%= result.student_name %>
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-12">
-              Major:
-              <% result.majors.each do |major| %>
-              <%= major.major_name %>
-              <% end %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              Dorm: <%= result.dorm.dorm_name %> <%= result.dorm_room_number %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              Class Year: <%= result.class_year %>
-            </div>
-          </div>
-        </div>
-      </div>
+        <%= render :partial => "student", :locals => {:result => result} %>
     <% end %>
   </div>
 </div>

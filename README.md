@@ -9,8 +9,8 @@ TODO
 2. Finish searchpage
   * Design
   * CSS/Template
-  * Rails Views
-  * Backend integration
+  * Rails Views (Completed)
+  * Backend integration (Completed)
 3. Finish Roommate Editor page
   * Design
   * CSS/Template

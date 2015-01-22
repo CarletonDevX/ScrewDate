@@ -6,3 +6,6 @@ stalkernet_data.csv
 
 # tmp files
 /tmp/*
+
+# OS files
+.DS_Store

@@ -7,7 +7,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <% if @studentsResults %>
+    <% if @studentsResults.length != 0 %>
       <% @studentsResults.each do |result| %>
           <%= render :partial => "student", :locals => {:result => result} %>
       <% end %>

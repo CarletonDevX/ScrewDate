@@ -7,8 +7,12 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <% @studentsResults.each do |result| %>
-        <%= render :partial => "student", :locals => {:result => result} %>
+    <% if @studentsResults %>
+      <% @studentsResults.each do |result| %>
+          <%= render :partial => "student", :locals => {:result => result} %>
+      <% end %>
+    <% else %>
+      There are no dates currently available who match your parameters.
     <% end %>
   </div>
 </div>

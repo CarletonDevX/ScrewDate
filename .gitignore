@@ -1,5 +1,6 @@
 #student data
 stalkernet_data.csv
+public/photos/*
 
 # log files
 /log/*.log

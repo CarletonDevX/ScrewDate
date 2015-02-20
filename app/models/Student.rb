@@ -27,7 +27,7 @@ class Student < ActiveRecord::Base
 
     # make sure that shown students are available, have a proxy
     # and don't yet have a date
-    return students.where(:available => true).where(:taken => false).where.not(:proxy => nil)
+    return students#.where(:available => true).where(:taken => false).where.not(:proxy => nil)
 
   end
 

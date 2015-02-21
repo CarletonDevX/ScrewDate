@@ -25,7 +25,10 @@
             </div>
           </div>
           <div class="col-sm-4 col-xs-12">
-            <img src="photos/biesterl.jpg" class="search-photo pull-right"/>
+            <!-- <img src="photos/biesterl.jpg" class="search-photo pull-right"/>
+            <%= "photos/" + result.student_email + ".jpg" %>
+            image_tag("/photos" + result.student_email + ".jpg") -->
+            <%= image_tag "/photos/" + result.student_email + ".jpg", :class => "search-photo pull-right" %>
           </div>
         </div>
     </div>

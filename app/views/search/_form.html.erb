@@ -14,15 +14,15 @@
         <%= text_field_tag(:student_name, nil, :class => "form-control") %>
         <!-- <input type="text" class="form-control" name="student_name" /> -->
         <%= label_tag(:class_year, "Year") %>
-        <%= select_tag :class_year, options_for_select(@years.uniq.pluck(:class_year)),
-        { :class => 'form-control', :include_blank => 'All' } %>
+        <%= select_tag :class_year, options_for_select(@years),
+          { :class => 'form-control', :include_blank => 'All' } %>
         <%= label_tag(:dorm_id, "Dorm") %>
         <%= select_tag :dorm_id, options_from_collection_for_select(@dorms, 'id', 'dorm_name'),
         { :class => 'form-control', :include_blank => 'All' } %>
         <span id="floor_option">
           <%= label_tag(:dorm_floor, "Floor") %>
           <!-- we should make this change based off of the dorm selection because duh -->
-          <%= select_tag :dorm_floor, options_for_select(@floors.uniq.pluck(:dorm_floor)),
+          <%= select_tag :dorm_floor, options_for_select(@floors),
           { :class => 'form-control', :include_blank => 'All' } %>
         </span>
         <%= label_tag(:major_id, "Major") %>

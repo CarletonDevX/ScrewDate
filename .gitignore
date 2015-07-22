@@ -1,6 +1,6 @@
 #student data
 stalkernet_data.csv
-public/photos/*
+app/assets/images/people/*
 
 # log files
 /log/*.log

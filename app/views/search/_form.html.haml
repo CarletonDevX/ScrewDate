@@ -1,0 +1,22 @@
+.row
+  .col-md-12
+    %h1 Search for your Screwdate
+
+.row
+  .col-md-12
+    %form
+      = form_tag('/search', :method => "get", id: "search-form") do
+        = label_tag(:student_name, "Name")
+        = text_field_tag(:student_name, nil, :class => "form-control")
+        = label_tag(:class_year, "Year")
+        = select_tag :class_year, options_for_select(@years), { :class => 'form-control', :include_blank => 'All' }
+        = label_tag(:dorm_id, "Dorm")
+        = select_tag :dorm_id, options_from_collection_for_select(@dorms, 'id', 'dorm_name'),
+        { :class => 'form-control', :include_blank => 'All' }
+        %span#floor_option
+          = label_tag(:dorm_floor, "Floor")
+          = select_tag :dorm_floor, options_for_select(@floors), { :class => 'form-control', :include_blank => 'All' }
+        = label_tag(:major_id, "Major")
+        = select_tag :major_id, options_from_collection_for_select(@majors, 'id', 'major_name'),
+        { :class => 'form-control', :include_blank => 'All' }
+        = submit_tag "Find a date!", { :class => 'btn btn-primary btn-lg pull-right', :id => 'dateSearch'}

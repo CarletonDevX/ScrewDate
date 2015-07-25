@@ -1,0 +1,30 @@
+!!! 5
+%html
+  %head
+    %title Screwdate Search
+    %meta{ charset: "utf-8" }
+    %meta{ name: "ScrewDate", content: "Set up your roommate!" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
+  %body
+    = render "shared/nav"
+    .container
+      .row
+        %h1 Sign up
+
+    .container
+      .row
+        = form_for(@user) do |f|
+          = render "shared/error_messages"
+          .form-group
+            = f.label :name
+            = f.text_field :name, class: "form-control"
+          .form-group
+            = f.label :email
+            = f.email_field :email, class: "form-control"
+          .form-group
+            = f.label :password
+            = f.password_field :password, class: "form-control"
+          .form-group
+            = f.label :password_confirmation, "Confirmation"
+            = f.password_field :password_confirmation, class: "form-control"
+          = f.submit "Create my account", class: "btn btn-primary"

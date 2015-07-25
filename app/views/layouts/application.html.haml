@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title Screw Date
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    %meta{ charset: "utf-8" }
+    %meta{ name: "ScrewDate", content: "Set up your roommate!" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
+  %body
+    .container
+      -# - flash.each do |message_type, message|
+      -#   .alert{ :class => "alert-#{message_type}" }
+      -#     = message
+    = yield

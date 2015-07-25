@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title Screwdate Search
+    %meta{ charset: "utf-8" }
+		%meta{ name: "ScrewDate", content: "Set up your roommate!" }
+		%meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
+  %body
+    = render "shared/nav"
+    .container
+      .row
+        = @user.name
+        = @user.email

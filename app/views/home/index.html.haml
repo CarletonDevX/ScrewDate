@@ -1,0 +1,19 @@
+%html
+	%head
+		%title ScrewDate
+		%meta{ charset: "utf-8" }
+		%meta{ name: "ScrewDate", content: "Set up your roommate!" }
+		%meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
+	%body
+		= render "shared/nav"
+		.jumbotron
+			.container
+				%h1 Hey there!
+				%p I imagine you're here to find your roommate a ScrewDate. If so...
+				= link_to "Search for a Screwdate", "search#search", class: "btn btn-primary btn-lg"
+		.container
+			.row
+				%h2 About
+		.footer-container
+			%footer
+				%h3 footer

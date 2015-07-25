@@ -1,0 +1,11 @@
+!!! 5
+%html
+  %head
+    %title Screwdate Search
+  %body
+    = render "shared/nav"
+    .container
+      - if @studentsResults == nil
+        = render "form"
+      - else
+        = render "results"

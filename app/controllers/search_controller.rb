@@ -5,8 +5,7 @@ class SearchController < ApplicationController
     end
     @majors = Major.order(:major_name)
     @dorms = Dorm.order(:dorm_name)
-    @years = Student.order(:class_year)
-    @floors = Student.uniq.order(:dorm_floor)
-      .where('dorm_floor != ?', -1)
+    @years = Student.order(:class_year).uniq.pluck(:class_year)
+    @floors = Student.order(:dorm_floor).uniq.pluck(:dorm_floor).reject { |f| f == -1 }
   end
 end

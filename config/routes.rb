@@ -7,14 +7,15 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   get 'home/index'
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
 
-  resources :users  
+  resources :users
   resources :search
+  get "/roommate" => "roommates#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

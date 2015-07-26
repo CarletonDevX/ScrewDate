@@ -10,13 +10,13 @@
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li
-          %a{ :href => "#" } Find Your Roommate
+          %a{ :href => roommate_path } Find Your Roommate
       %ul.nav.navbar-nav.navbar-right
         - if logged_in?
           %li
             = link_to "Users", "#"
           %li.dropdown
-            %a.dropdown-toggle{ :href => "#", :data-toggle => "dropdown" }
+            %a.dropdown-toggle{ :href => "#", "data-toggle" => "dropdown" }
               Account
               %b.caret
           %ul.dropdown_menu

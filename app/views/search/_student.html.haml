@@ -1,21 +1,22 @@
-.panel.panel-default
-  .panel-heading
-    = result.student_name
-  .panel-body
-    .row
-      .col-sm-8.col-xs-12
-        .row
-          .col-xs-12
-            Major:
-            - result.majors.each do |major|
-              = major.major_name
-        .row
-          .col-xs-12
-            Dorm:
-            = "#{result.dorm.dorm_name} #{result.dorm_room_number}"
-        .row
-          .col-xs-12
-            Class Year:
-            = result.class_year
-      .col-sm-4.col-xs-12
-        = image_tag "people/#{result.student_email}.jpg", class: "search-photo pull-right"
+.col-md-6
+  .panel.panel-default
+    .panel-heading
+      %h4= result.student_name
+    .panel-body
+      .row
+        .col-sm-8.col-xs-12
+          .row
+            .col-xs-12
+              Major:
+              - result.majors.each do |major|
+                = major.major_name
+          .row
+            .col-xs-12
+              Dorm:
+              = "#{result.dorm.dorm_name} #{result.dorm_room_number}"
+          .row
+            .col-xs-12
+              Class Year:
+              = result.class_year
+        .col-sm-4.col-xs-12
+          = image_tag "people/#{result.student_email}.jpg", class: "search-photo pull-right"

@@ -10,7 +10,7 @@ class Student < ActiveRecord::Base
     students = self.all
 
     if student_name.present?
-      students = students.where("student_name LIKE ?", "%#{student_name}%")
+      students = students.where("lower(student_name) LIKE ?", "%#{student_name.downcase}%")
     end
 
     if class_year.present?

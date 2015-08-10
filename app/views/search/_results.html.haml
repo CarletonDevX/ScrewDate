@@ -11,3 +11,11 @@
 - else
   - @studentsResults.each do |result|
     = render :partial => "student", :locals => { :result => result}
+
+.row
+  .col-xs-6
+    - if @previousPage
+      %a.btn.btn-primary{ :type => "button", :href => @previousPage} previous
+  .col-xs-6.text-right
+    - if @nextPage
+      %a.btn.btn-primary{ :type => "button", :href => @nextPage} next
